@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hanahaku-feed"
+version = "0.1.0"
+description = "横浜花博 GREEN×EXPO 2027 の公式新着情報を JSON・RSS に変換する非公式ツール"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "kacky000"}]
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+  "Topic :: Internet :: WWW/HTTP",
+]
+
+[project.scripts]
+hanahaku-feed = "hanahaku_feed.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["hanahaku_feed*"]
+exclude = ["tests*", "data*", "docs*", "examples*"]
